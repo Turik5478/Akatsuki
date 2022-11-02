@@ -1,0 +1,762 @@
+/* Глобальные параметры */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+    font-family: 'Comfortaa', cursive;
+    scroll-behavior: smooth;
+}
+
+h1 {
+    font-size: 6rem;
+}
+
+li,
+button,
+label,
+input,
+p {
+    font-size: 2rem;
+}
+
+h2 {
+    font-size: 4.8rem;
+}
+
+h3 {
+    font-size: 4rem;
+}
+
+h4,
+h5 {
+    font-size: 3.5rem;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+    font-size: 4rem !important;
+}
+
+a:hover {
+    color: rgb(133, 39, 39);
+}
+
+button {
+    padding: 2rem 6rem;
+    background-color: rgb(133, 39, 39);
+    border: none;
+    color: white;
+    cursor: pointer;
+    border-radius: 2rem;
+    transition: background 0.5s ease-in-out;
+}
+
+button:hover {
+    background: rgb(100, 30, 30);
+}
+
+
+/*
+button:focus {
+     transform: rotate(360deg);
+    transition: 1s; 
+} */
+
+::selection {
+    color: #dd2b2c;
+}
+
+
+/* Навигация */
+
+.main-head {
+    background: rgb(29, 30, 53);
+    color: white;
+    font-family: 'Lobster', cursive;
+    position: sticky;
+    top: 0px;
+    z-index: 3;
+}
+
+nav {
+    min-height: 10vh;
+    padding: 2rem;
+    display: flex;
+    width: 90%;
+    margin: auto;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+nav ul {
+    display: flex;
+    flex: 1 1 60rem;
+    justify-content: space-around;
+    align-items: center;
+    list-style: none;
+}
+
+#logo {
+    flex: 1 1 40rem;
+    font-weight: 400;
+    cursor: default;
+}
+
+.hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 1)), url('./Icons/AllAkatsuki.png');
+    min-height: 90vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: rgb(28, 29, 44);
+    background-position: center;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.hero h3 {
+    padding: 2.5rem;
+}
+
+ul li a,
+nav h1 {
+    font-size: 3vh;
+}
+
+html {
+    font-size: 45%;
+}
+
+
+/* Информация */
+
+#info {
+    min-height: 100vh;
+    color: white;
+    background: linear-gradient(rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 1)), url(./Icons/akatsukimoon.jpg);
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-position: center;
+    overflow: hidden;
+}
+
+.info-head {
+    width: 90%;
+    margin: auto;
+}
+
+.info-head h1 {
+    color: rgb(133, 39, 39);
+}
+
+.info-head h2 {
+    padding: 10rem;
+    background: linear-gradient(to right, rgb(255, 255, 255), rgb(255, 255, 255), #dd7373, #f55151, #dd7373, rgb(255, 255, 255), rgb(255, 255, 255));
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+
+/* История */
+
+.history-creation {
+    min-height: 100vh;
+    color: white;
+    position: relative;
+    z-index: -2;
+    display: flex;
+    align-items: flex-end;
+    background: linear-gradient(rgba(0, 0, 0, 1), transparent, transparent), rgb(28, 29, 44);
+}
+
+.history-creation h3 {
+    width: 90%;
+    margin: 5vh 10vh;
+    align-items: flex-end;
+}
+
+.cloud {
+    position: absolute;
+    top: -2%;
+    right: 5%;
+}
+
+.moving-cloud-1 {
+    animation: cloudAnimation 3s infinite alternate ease-in-out;
+    z-index: -1;
+}
+
+.moving-cloud-2 {
+    top: 2%;
+    z-index: -2;
+    opacity: 0.3;
+    animation: cloudAnimation 3.5s infinite alternate ease-in-out;
+}
+
+.moving-cloud-3 {
+    left: 10%;
+    top: 6%;
+    opacity: 0.75;
+    animation: cloudAnimation 2s infinite alternate ease-in-out;
+    z-index: -1;
+}
+
+.moving-cloud-4 {
+    left: 10%;
+    top: 10%;
+    z-index: -2;
+    opacity: 0.2;
+    animation: cloudAnimation 2.5s infinite alternate ease-in-out;
+}
+
+
+/* Цель */
+
+#goal {
+    min-height: 100vh;
+    background: rgb(28, 29, 44);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.goal-head {
+    width: 90%;
+    margin: auto;
+}
+
+.goal-head h1 {
+    color: rgb(133, 39, 39);
+}
+
+.goal-head h2 {
+    padding: 10rem 0rem 0rem 0rem;
+}
+
+.goal-head ul {
+    padding: 5rem;
+}
+
+
+/* Состав */
+
+#members {
+    background: rgb(28, 29, 44);
+    color: white;
+}
+
+#members h1 {
+    color: rgb(133, 39, 39);
+    width: 90%;
+    margin: auto;
+}
+
+
+/* Пейн */
+
+.pain {
+    width: 90%;
+    margin: auto;
+    position: relative;
+}
+
+.pain-head {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+.pain-head h2 {
+    color: rgb(133, 39, 39);
+    position: absolute;
+    top: 5%;
+}
+
+.pain-head h3 {
+    max-width: 40vw;
+}
+
+.pain-head img {
+    max-width: 50vw;
+}
+
+.pain-info {
+    min-height: 100vh;
+}
+
+.pain-info h3 {
+    padding: 1.5rem 0rem;
+}
+
+
+/* Конан */
+
+.konan {
+    width: 90%;
+    margin: auto;
+    position: relative;
+}
+
+.konan-head {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+.konan-head h2 {
+    color: rgb(133, 39, 39);
+    position: absolute;
+    top: 5%;
+}
+
+.konan-head img {
+    max-width: 50%;
+}
+
+.konan-info {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+
+/* Итачи */
+
+.itachi {
+    width: 90%;
+    margin: auto;
+    position: relative;
+}
+
+.itachi-head {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+.itachi-head h2 {
+    color: rgb(133, 39, 39);
+    position: absolute;
+    top: 5%;
+}
+
+.itachi-info {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+
+/* Кисаме */
+
+.kisame {
+    width: 90%;
+    margin: auto;
+    position: relative;
+}
+
+.kisame-head {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+.kisame-head h2 {
+    color: rgb(133, 39, 39);
+    position: absolute;
+    top: 5%;
+}
+
+.kisame-info {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+
+/* Сасори */
+
+.sasori {
+    position: relative;
+    width: 90%;
+    margin: auto;
+}
+
+.sasori-head {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+.sasori-head h2 {
+    color: rgb(133, 39, 39);
+    position: absolute;
+    top: 5%;
+}
+
+.sasori-info {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+
+/* Дейдара */
+
+.deidara {
+    position: relative;
+    width: 90%;
+    margin: auto;
+}
+
+.deidara-head {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+.deidara-head h2 {
+    color: rgb(133, 39, 39);
+    position: absolute;
+    top: 5%;
+}
+
+.deidara-info {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+
+/* Какузу */
+
+.kakuzu {
+    position: relative;
+    width: 90%;
+    margin: auto;
+}
+
+.kakuzu-head {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+.kakuzu-head h2 {
+    color: rgb(133, 39, 39);
+    position: absolute;
+    top: 5%;
+}
+
+.kakuzu-info {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+
+/* Спидвагон */
+
+.speedwagon {
+    position: relative;
+    width: 90%;
+    margin: auto;
+}
+
+.speedwagon-head {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+.speedwagon-head h2 {
+    color: rgb(133, 39, 39);
+    position: absolute;
+    top: 5%;
+}
+
+
+/* Хидан */
+
+.hidan {
+    position: relative;
+    width: 90%;
+    margin: auto;
+}
+
+.hidan-head {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+.hidan-head h2 {
+    color: rgb(133, 39, 39);
+    position: absolute;
+    top: 5%;
+}
+
+.hidan-info {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+
+/* Орочимару */
+
+.orochimaru {
+    position: relative;
+    width: 90%;
+    margin: auto;
+}
+
+.orochimaru-head {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+.orochimaru-head h2 {
+    color: rgb(133, 39, 39);
+    position: absolute;
+    top: 5%;
+}
+
+.orochimaru-info {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+
+/* Белый Зецу */
+
+.white_zetsu {
+    position: relative;
+    width: 90%;
+    margin: auto;
+}
+
+.white_zetsu-head {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+.white_zetsu-head h2 {
+    color: rgb(133, 39, 39);
+    position: absolute;
+    top: 5%;
+}
+
+.white_zetsu-info {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+
+/* Черный Зецу */
+
+.black_zetsu {
+    position: relative;
+    width: 90%;
+    margin: auto;
+}
+
+.black_zetsu-head {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+.black_zetsu-head h2 {
+    color: rgb(133, 39, 39);
+    position: absolute;
+    top: 5%;
+}
+
+.black_zetsu-info {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+
+/* Преимущества */
+
+#benifits {
+    background: rgb(28, 29, 44);
+}
+
+.benifits-head {
+    background-color: rgb(29, 30, 53);
+    padding: 3rem;
+    min-height: 30vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+}
+
+.benifits-head h2 {
+    color: rgb(133, 39, 39);
+}
+
+.benifits-head h3 {
+    padding: 1rem;
+}
+
+.cards {
+    width: 90%;
+    margin: auto;
+    display: flex;
+    min-height: 70vh;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.cards img {
+    max-width: 15%;
+    margin: auto;
+}
+
+.card {
+    text-align: center;
+    flex: 1 1 25rem;
+    min-height: 50vh;
+    margin: 2rem 5rem;
+    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.5), 0px 20px 20px rgba(0, 0, 0, 0.5);
+    color: white;
+}
+
+.card h4,
+.card p {
+    padding: 2rem;
+}
+
+.card-icon {
+    background-color: rgb(29, 30, 53);
+}
+
+
+/* Связаться с нами */
+
+#contact {
+    min-height: 100vh;
+    background: rgb(28, 29, 44);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.form-wrapper {
+    background: rgba(29, 30, 53, 0.9);
+    width: 60%;
+    color: white;
+    border-radius: 20px;
+    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.5), 0px 20px 20px rgba(0, 0, 0, 0.5);
+}
+
+.form-head {
+    text-align: center;
+    padding: 4rem;
+}
+
+.name-form,
+.email-form {
+    padding: 3rem;
+    text-align: center;
+}
+
+.form-wrapper label {
+    margin: 0rem 3rem;
+}
+
+.form-wrapper button {
+    width: 100%;
+    padding: 2rem;
+    margin-top: 8rem;
+}
+
+.form-wrapper input {
+    padding: 1rem 3rem;
+}
+
+footer {
+    background: rgba(29, 30, 53);
+    color: white;
+}
+
+.footer-wrapper {
+    display: flex;
+    padding: 2rem;
+    width: 90%;
+    margin: auto;
+    align-items: center;
+    min-height: 10vh;
+    flex-wrap: wrap;
+}
+
+footer h5 {
+    display: flex;
+    flex: 1 1 40rem;
+}
+
+footer ul {
+    display: flex;
+    list-style: none;
+    flex: 1 1 40rem;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@keyframes cloudAnimation {
+    from {
+        transform: translate(10%, -10%);
+    }
+    to {
+        transform: translate(0%, 0%);
+    }
+}
+
+@media screen and (max-width: 932px) {
+    nav {
+        text-align: center;
+    }
+    #logo {
+        padding: 2rem;
+    }
+    .cloud {
+        height: 40rem;
+        pointer-events: none;
+    }
+    .moving-cloud-1 {
+        z-index: -1;
+    }
+    .moving-cloud-2 {
+        z-index: -2;
+    }
+    .form-wrapper {
+        width: 100%;
+    }
+    footer h5 {
+        padding-bottom: 5rem;
+        justify-content: center;
+    }
+}
